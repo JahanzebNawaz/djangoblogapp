@@ -1,0 +1,33 @@
+{% extends 'blogapp/base.html' %}
+
+
+{% block body %}
+        <div class="container mt-3">
+                
+                <div class="row">
+                        {% for blog in blogs %}
+                                <div class="card col-3 m-2">
+                                        <div class="card-body">
+                                                <h5>{{ blog.blog_title}}</h5>
+                                                <img src="/media/{{blog.blog_image}}" alt="" class="img-fluid">
+                                                <p> {{blog.blog_description|safe }}</p>
+                                               <small>
+                                                       <span>Author:</span>
+                                                       <span>{{blog.blog_user}}</span>
+                                               </small> <br>
+                                                <a href="{% url 'blogapp:blog_page' blog.id %}" class="card-link">read</a>
+                                                
+                                                {% if user.id == blog.blog_user.id %}
+                                                <a href="{% url 'blogapp:blog_update' blog.id %}" class="card-link">update</a>
+                                                <a href="{% url 'blogapp:blog_delete' blog.id %}" class="card-link text-danger">delete</a>
+                                                {% endif %}
+                                                        
+                                                
+                                        </div>
+                                </div>
+                        {% endfor %}
+                </div>
+                        
+        </div>
+{% endblock body %}
+        

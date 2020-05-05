@@ -1,0 +1,19 @@
+{% extends 'blogapp/base.html' %}
+
+
+{% block body %}
+        <div class="container mt-3">
+                
+                <div class="card">
+                        <div class="card-body">
+                                <h2>{{blog.blog_title}}</h2>
+                                <p class="lead">
+                                        {{blog.blog_description|safe }}
+                                </p>
+                                <span>Post by: {{blog.blog_user}}</span>
+                        </div>
+                </div>
+                        
+        </div>
+{% endblock body %}
+        
