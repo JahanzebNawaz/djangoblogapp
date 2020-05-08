@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/jk/JKROOT/PROGRAMMING/YOUTUBE/env"
+set -gx VIRTUAL_ENV "/home/jk/JKROOT/GITHUB_REPO/djangoblogapp/env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

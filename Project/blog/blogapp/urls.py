@@ -13,4 +13,5 @@ urlpatterns = [
   path('blog/page/<int:id>', views.blog_page, name='blog_page'),
   path('blog/update/<int:id>', views.blog_update, name='blog_update'),
   path('blog/delete/<int:id>', views.blog_delete, name='blog_delete'),
+
 ]

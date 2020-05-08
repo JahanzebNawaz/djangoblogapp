@@ -1,4 +1,4 @@
-#!/home/jk/JKROOT/PROGRAMMING/YOUTUBE/env/bin/python3
+#!/home/jk/JKROOT/GITHUB_REPO/djangoblogapp/env/bin/python3
 from django.core import management
 
 if __name__ == "__main__":
